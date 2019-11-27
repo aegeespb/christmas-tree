@@ -8,38 +8,56 @@ function getRandomColor() {
 }
 
 function addBall(params) {
-    var ball = document.createElement("div");
+    var ball = document.createElement("a");
     ball.setAttribute('class', 'ball taken');
     ball.setAttribute('id', params.id);
-    ball.setAttribute('data-micromodal-trigger', 'modal-read');
-    ball.setAttribute('data-name', params.first_name);
-    ball.setAttribute('data-l-name', params.last_name);
-    ball.setAttribute('data-message', params.msg);
-    ball.setAttribute('data-host', params.host);
-    ball.style.left = params.x;
-    ball.style.top = params.y;
+    ball.setAttribute('data-toggle', 'popover-hover');
+    ball.setAttribute('title', '<b>'+params.first_name+'</b> '+params.last_name+' from '+params.host);
+    ball.setAttribute('data-content', params.msg);
+    ball.addEventListener("click", e => { e.stopPropagation(); });
+    ball.style.left = params.position.x;
+    ball.style.top = params.position.y;
     ball.style.backgroundColor = params.bgcolor;
-    document.getElementById("tree").appendChild(ball);
 
-    ball.addEventListener("mouseover", function () {
-        ball.style.cursor = "pointer";
-    });
-    ball.addEventListener("click", function () {
-        if (this.className.indexOf("taken") >= 0) {
-            document.getElementById("modal-read-message").textContent = this.getAttribute("data-message") + " 🎁";
-            document.getElementById("modal-read-name").innerHTML = this.getAttribute("data-name") + " " + this.getAttribute("data-l-name") + " from " + this.getAttribute("data-host");
-        }
-    });
+    document.getElementById("tree").appendChild(ball);
 }
 
-window.onload = function () {
+async function saveNewBall() {
+        if (
+            document.getElementById("modal-wish-name").value === "" ||
+            document.getElementById("modal-wish-last-name").value === "" ||
+            document.getElementById("modal-wish-host").value === "" ||
+            document.getElementById("modal-wish-message").value === ""
+        ) {
+            document.getElementById("modal-wish-hint").classList.add("is-show");
+            document.getElementById("modal-wish-hint").innerText = "Fill all the gaps!";
+            return;
+        }
+        document.getElementById("modal-wish-hint").classList.remove("is-show");
+        //document.getElementById("modal-wish").classList.remove("is-show");
+    
+        //let response = await fetch('http://ipinfo.io/ip');
+        //let ip = await response.text();
+        
+        var ball = {
+            first_name: document.getElementById("modal-wish-name").value,
+            last_name: document.getElementById("modal-wish-last-name").value,
+            msg: document.getElementById("modal-wish-message").value,
+            host: document.getElementById("modal-wish-host").value,
+            position: {
+                x: document.getElementById("modal-wish-x-position").value+'px',
+                y: document.getElementById("modal-wish-y-position").value+'px'
+            },
+            //ip: ip.slice(0, -1)
+            ip: "0.0.0.0"
+        }
+        ball.id = await firebase.database().ref('wishes').push(ball).key;
 
-    var ip = "";
-    fetch("http://ipinfo.io/ip")
-        .then(response => response.text())
-            .then(function(addr) {
-                ip = addr.slice(0, -1);
-            });
+        ball.bgcolor = getRandomColor();
+        addBall(ball)
+    }
+
+$(document).ready(function () {
 
     firebase.initializeApp(firebaseConfig);
 
@@ -54,8 +72,10 @@ window.onload = function () {
                   last_name: childSnapshot.child("last_name").val(),
                   msg: childSnapshot.child("msg").val(),
                   host: childSnapshot.child("host").val(),
-                  x: childSnapshot.child("position").child("x").val(),
-                  y: childSnapshot.child("position").child("y").val(),
+                  position: {
+                      x: childSnapshot.child("position").child("x").val(),
+                      y: childSnapshot.child("position").child("y").val()
+                  },
                   bgcolor: getRandomColor()
               })
 
@@ -63,6 +83,14 @@ window.onload = function () {
 
           /* modal lib */
           MicroModal.init();
+
+          $('body').popover({
+              html: true,
+              trigger: 'hover click',
+              placement: 'left',
+              selector: '[data-toggle="popover-hover"]'
+          });
+
 
       });
 
@@ -74,35 +102,10 @@ window.onload = function () {
         lazy: false
     });
 
-    submit.addEventListener("click", function (e) {
+    submit.addEventListener("click", function(e) {
         e.preventDefault();
-        if (
-            document.getElementById("modal-wish-name").value === "" ||
-            document.getElementById("modal-wish-last-name").value === "" ||
-            document.getElementById("modal-wish-host").value === "" ||
-            document.getElementById("modal-wish-message").value === ""
-        ) {
-            document.getElementById("modal-wish-hint").classList.add("is-show");
-            document.getElementById("modal-wish-hint").innerText = "Fill all the gaps!";
-        }
-        document.getElementById("modal-wish-hint").classList.remove("is-show");
-        //document.getElementById("modal-wish").classList.remove("is-show");
-        
-        var ball = {
-            first_name: document.getElementById("modal-wish-name").value,
-            last_name: document.getElementById("modal-wish-last-name").value,
-            msg: document.getElementById("modal-wish-message").value,
-            host: document.getElementById("modal-wish-host").value,
-            position: {
-                x: document.getElementById("modal-wish-x-position").value+'px',
-                y: document.getElementById("modal-wish-y-position").value+'px'
-            },
-            ip: ip
-        }
-        ball.id = firebase.database().ref('wishes').push(ball).key;
-
-        ball.bgcolor = getRandomColor();
-        addBall(ball)
+        saveNewBall();
+        $("#modal-wish-form").trigger("reset");
     });
 
     if (document.getElementById("modal-error")) {
@@ -116,4 +119,4 @@ window.onload = function () {
     });
 
     snow.start();
-};
+});

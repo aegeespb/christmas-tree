@@ -9,19 +9,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/main.css">
-        <link rel="stylesheet" href="assets/libs/micromodal/css/micromodal.css">
+    <link rel="stylesheet" href="assets/libs/micromodal/css/micromodal.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
           integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <title>AEGEE</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <title>Happy New Year!</title>
 </head>
 <body>
 
 <div class="christmas">
-    <p>Happy New <b>2019</b> Year!</p>
+    <p>Happy New <b>2020</b> Year!</p>
     <div class="sub-christmas">from <a href="https://www.facebook.com/aegee.spb/" target="_blank">AEGEE-Sankt-Peterburg</a></div>
 </div>
+
 <section class="main">
     <div class="tree" id="tree" data-micromodal-trigger="modal-wish" >
     </div>
@@ -30,7 +36,7 @@
 <div class="modal micromodal-slide" id="modal-wish" aria-hidden="true">
     <div class="modal__overlay" tabindex="" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-            <form method="post">
+            <form method="post" id="modal-wish-form">
                 <header class="modal__header">
                     <h2 class="modal__title" id="modal-1-title">Make a wish 🎁</h2>
                     <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
@@ -45,8 +51,8 @@
                     <label for="modal-wish-message" class="w-100">Your wish</label>
                     <textarea rows="10" cols="50" tabindex="4" class="w-100" id="modal-wish-message"
                               name="modal-wish-message"></textarea>
-                    <input type="text" id="modal-wish-x-position" name="modal-wish-position">
-                    <input type="text" id="modal-wish-y-position" name="modal-wish-position">
+                    <input type="hidden" id="modal-wish-x-position" name="modal-wish-position">
+                    <input type="hidden" id="modal-wish-y-position" name="modal-wish-position">
                     <div id="modal-wish-hint"></div>
                 </main>
                 <footer class="modal__footer">
@@ -59,24 +65,10 @@
     </div>
 </div>
 
-<div class="modal micromodal-slide" id="modal-read" aria-hidden="true">
-    <div class="modal__overlay" tabindex="" data-micromodal-close>
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-            <header class="modal__header">
-                <h2 id="modal-read-name" class="modal__title"></h2>
-                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-            </header>
-            <main class="modal__content" id="modal-1-content">
-                <p id="modal-read-message"></p>
-            </main>
-        </div>
-    </div>
-</div>
-
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> <!-- popup https://micromodal.now.sh/ -->
 <script src="https://unpkg.com/imask"></script>
 
-<script src="assets/js/main.js"></script> <!-- project main -->
+<script src="assets/js/main.js"></script> </!-- project main -->
 <script src="https://cdn.jsdelivr.net/gh/Canop/snow@80ac80a133f4835fdbc39add6b27e5fef9e56d67/snow.js"></script> <!-- snowflakes -->
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -84,11 +76,18 @@
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
- <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
 
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
+    apiKey: "AIzaSyARzrYe_ipSKn52Dy5VZ2zagbBhW7d3SLg",
+    authDomain: "aegeespb-christmas-tree-db.firebaseapp.com",
+    databaseURL: "https://aegeespb-christmas-tree-db.firebaseio.com",
+    projectId: "aegeespb-christmas-tree-db",
+    storageBucket: "aegeespb-christmas-tree-db.appspot.com",
+    messagingSenderId: "780159273903",
+    appId: "1:780159273903:web:3e4e8ef21fd393e68afd5a"
   };
 </script>
 
