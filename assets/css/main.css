@@ -1,14 +1,10 @@
-@font-face {
-  font-family: "Bebas Neue W01";
-  src: url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf");
-  src: url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot") format("embedded-opentype"), url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2") format("woff2"), url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff") format("woff"), url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf") format("truetype"); }
 html, body {
   height: 100%; }
 
 body {
   background: url("../images/bg-3.jpg") no-repeat top left #b3c2d3;
   background-size: cover;
-  font-family: "Bebas Neue W01", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 16px; }
   @media screen and (max-width: 650px) {
     body {
@@ -50,7 +46,7 @@ body {
       padding: 30px;
       position: absolute; }
     body section.main .tree {
-      background: url("../images/tree-3.png") no-repeat center;
+      background: url("../images/tree-0.png") no-repeat center;
       background-size: contain;
       width: 650px;
       margin: 130px auto 0;
