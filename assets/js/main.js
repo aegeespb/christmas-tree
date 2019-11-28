@@ -100,7 +100,7 @@ $(document).ready(function () {
         $('body').popover({
             html: true,
             trigger: 'hover click',
-            placement: 'left',
+            placement: 'left auto',
             selector: '[data-toggle="popover-hover"]'
         });
 
