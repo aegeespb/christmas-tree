@@ -11,8 +11,6 @@ function addBall(params) {
     ball.addEventListener("click", e => { e.stopPropagation(); });
     ball.style.left = params.position.x;
     ball.style.top = params.position.y;
-    ball.style.position = "absolute";
-    ball.style.width = "36px";
 
     document.getElementById("tree").appendChild(ball);
 }
@@ -43,8 +41,8 @@ async function saveNewBall() {
             msg: msg,
             host: $("#modal-wish-host").val(),
             position: {
-                x: $("#modal-wish-x-position").val()+'px',
-                y: $("#modal-wish-y-position").val()+'px'
+                x: $("#modal-wish-x-position").val()+'%',
+                y: $("#modal-wish-y-position").val()+'%'
             },
             //ip: ip.slice(0, -1)
             ip: "0.0.0.0"
@@ -86,32 +84,29 @@ $(document).ready(function () {
 
     });
 
-    /* modal lib */
-    MicroModal.init();
-
-    var submit = document.getElementById("submit");
-
     /* host mask */
     IMask(document.getElementById("modal-wish-host"), {
         mask: "{AEGEE-}[**********************]",
         lazy: false
     });
 
+    var submit = document.getElementById("submit");
     submit.addEventListener("click", function(e) {
         e.preventDefault();
         saveNewBall();
         $("#modal-wish-form").trigger("reset");
     });
 
-    if (document.getElementById("modal-error")) {
-        MicroModal.show("modal-error");
-    }
-
     var tree_img = document.getElementById("tree");
     tree_img.addEventListener("click", function (e) {
-        document.getElementById("modal-wish-x-position").value = e.layerX-18; //e.pageX - this.offsetLeft;
-        document.getElementById("modal-wish-y-position").value = e.layerY; //e.pageY - this.offsetTop;
+        var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
+        var y = Math.floor(e.layerY*100/this.clientHeight);
+        $("#modal-wish-x-position").val(x); // e.layerX-18; //e.pageX - this.offsetLeft;
+        $("#modal-wish-y-position").val(y); // e.layerY; //e.pageY - this.offsetTop;
     });
 
     snow.start();
+
+    /* modal lib */
+    MicroModal.init();
 });

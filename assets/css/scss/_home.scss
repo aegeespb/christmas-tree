@@ -1,10 +1,5 @@
 @font-face {
-  font-family: "Bebas Neue W01";
-  src: url("../fonts/MTI-WebFonts-1828579492/Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf");
-  src: url('../fonts/MTI-WebFonts-1828579492/Fonts/1444649/3d9ec9a9-76a2-4cfe-b376-76e7340c3b50.eot') format('embedded-opentype'),
-  url('../fonts/MTI-WebFonts-1828579492/Fonts/1444649/e0d6f852-5401-4bbf-9672-47a50c5c87c6.woff2') format('woff2'),
-  url('../fonts/MTI-WebFonts-1828579492/Fonts/1444649/7fedd582-6ae3-4850-be2f-4acae2e74fa5.woff') format('woff'),
-  url('../fonts/MTI-WebFonts-1828579492/Fonts/1444649/d6e08ef3-40db-4ac3-82df-f062f55a72f5.ttf')  format('truetype')
+  font-family: "Bebas Neue";
 }
 
 html, body {
@@ -12,13 +7,10 @@ html, body {
 }
 
 body {
-  // background: url($bg-img) repeat top left #f2f2f2;
-  //background-size: 10%;
   background: url($bg-img) no-repeat top left #f2f2f2;
   background-size: cover;
-  font-family: "Bebas Neue W01", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
-  // background-repeat: repeat;
   @media screen and (max-width: $tree-width) {
     /* for mobile */
     width: 100%;
@@ -30,7 +22,7 @@ body {
     border-radius: 5px;
     padding: 15px;
     min-height: 90px;
-    width: 700px;
+    width: 650px;
     margin: 10px auto 20px;
     background-color: rgba(255, 255, 255, .5);
     position: absolute;
@@ -39,6 +31,11 @@ body {
     color: #cc263a;
     b {
       color: $aegee-spb-blue;
+    }
+    @media screen and (max-width: $tree-width) {
+      /* for mobile */
+      font-size: 3rem;
+      width: 100%;
     }
     .sub-christmas {
       font-size: 1.5rem;
@@ -63,7 +60,7 @@ body {
     .tree {
       background: url($tree-img) no-repeat center;
       background-size: contain;
-      width: 50%;
+      width: 650px;
       margin: 130px auto 0;
       left: 0;
       right: 0;
@@ -75,30 +72,28 @@ body {
       }
       @media screen and (max-width: $tree-width) {
         /* for mobile */
+        background-size: 85%;
+        height:auto;
         width: 100%;
         &:after {
           content: "";
           display: block;
-          padding-bottom: 150%;
+          padding-bottom: 115%;
         }
       }
       .ball {
-        height: 25px;
-        width: 25px;
-        max-width: 10%;
-        background: #fff;
+        width: auto;
+        height: 6%;
         border-radius: 50%;
         position: absolute;
         top: $fifty;
         left: $fifty;
         @media screen and (max-width: $tree-width) {
           /* for mobile */
-          //height: 40px;
-
-          //transform: scale(0.7);
-          //width: 40px;
+          height: 7%;
 
         }
+        /*
         &:before {
           content: "";
           position: absolute;
@@ -109,218 +104,12 @@ body {
           border-radius: 50%;
           background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 60%);
           filter: blur(5px);
-        }
+        } */
         &:hover {
-          box-shadow: 0 0 20px #fff;
+          box-shadow: 0 5px 20px #fff;
           transition: .3s;
           opacity: 1;
         }
-        &.position-1 {
-          background-color: $teal;
-          top: $fifty - 35%;
-          left: $fifty + 2%;
-        }
-        &.position-2 {
-          background-color: $red;
-          top: $fifty - 30%;
-          left: $fifty;
-        }
-        &.position-3 {
-          background-color: $green;
-          top: $fifty - 20%;
-          left: $fifty - 4%;
-        }
-        &.position-4 {
-          background-color: $purple;
-          top: $fifty - 15%;
-          left: $fifty;
-        }
-        &.position-5 {
-          background-color: $orange;
-          top: $fifty - 5%;
-          left: $fifty - 13%;
-        }
-        &.position-6 {
-          background-color: $indigo;
-          top: $fifty - 2%;
-          left: $fifty + 9%;
-        }
-        &.position-7 {
-          background-color: $yellow;
-          top: $fifty + 5%;
-          left: $fifty - 8%;
-        }
-        &.position-8 {
-          background-color: $blue;
-          top: $fifty + 13%;
-          left: $fifty + 5%;
-        }
-        &.position-9 {
-          background-color: $turquoise;
-          top: $fifty + 17%;
-          left: $fifty + 9%;
-        }
-        &.position-10 {
-          background-color: $red;
-          top: $fifty + 25%;
-          left: $fifty - 10%;
-        }
-        &.position-11 {
-          background-color: $orange;
-          top: $fifty + 30%;
-          left: $fifty + 15%;
-        }
-        &.position-12 {
-          background-color: $pink;
-          top: $fifty + 30%;
-          left: $fifty;
-        }
-        &.position-13 {
-          background-color: $teal;
-          top: $fifty + 35%;
-          left: $fifty - 20%;
-        }
-        &.position-14 {
-          background-color: $green;
-          top: $fifty + 33%;
-          left: $fifty - 10%;
-        }
-        &.position-15 {
-          background-color: $yellow;
-          top: $fifty + 33%;
-          left: $fifty + 20%;
-        }
-        &.position-16 {
-          background-color: $purple;
-          top: $fifty;
-          left: $fifty;
-        }
-        &.position-17 {
-          background-color: $b-orange;
-          top: $fifty - 10%;
-          left: $fifty - 8%;
-        }
-        &.position-18 {
-          background-color: $l-green;
-          top: $fifty - 8%;
-          left: $fifty + 5%;
-        }
-        &.position-19 {
-          background-color: $turquoise;
-          top: $fifty - 25%;
-          left: $fifty - 8%;
-        }
-        &.position-20 {
-          background-color: $d-blue;
-          top: $fifty - 35%;
-          left: $fifty - 6%;
-        }
-        &.position-21 {
-          background-color: $yellow;
-          top: $fifty - 45%;
-          left: $fifty;
-        }
-        &.position-22 {
-          background-color: $green;
-          top: $fifty - 25%;
-          left: $fifty + 5%;
-        }
-        &.position-23 {
-          background-color: $blue;
-          top: $fifty - 17%;
-          left: $fifty + 5%;
-        }
-        &.position-24 {
-          background-color: $orange;
-          top: $fifty - 10%;
-          left: $fifty + 10%;
-        }
-        &.position-25 {
-          background-color: $indigo;
-          top: $fifty + 10%;
-          left: $fifty - 2%;
-        }
-        &.position-26 {
-          background-color: $pink;
-          top: $fifty + 15%;
-          left: $fifty - 5%;
-        }
-        &.position-27 {
-          background-color: $teal;
-          top: $fifty + 17%;
-          left: $fifty - 10%;
-        }
-        &.position-28 {
-          background-color: $yellow;
-          top: $fifty + 13%;
-          left: $fifty - 15%;
-        }
-        &.position-29 {
-          background-color: $purple;
-          top: $fifty + 15%;
-          left: $fifty + 15%;
-        }
-        &.position-30 {
-          background-color: $blue;
-          top: $fifty + 5%;
-          left: $fifty + 12%;
-        }
-        &.position-31 {
-          background-color: $turquoise;
-          top: $fifty + 35%;
-          left: $fifty + 13%;
-        }
-        &.position-32 {
-          background-color: $lime;
-          top: $fifty + 35%;
-          left: $fifty + 5%;
-        }
-        &.position-33 {
-          background-color: $red;
-          top: $fifty + 25%;
-          left: $fifty + 5%;
-        }
-        &.position-34 {
-          background-color: $d-blue;
-          top: $fifty + 40%;
-          left: $fifty + 15%;
-        }
-        &.position-35 {
-          background-color: $b-orange;
-          top: $fifty + 40%;
-          left: $fifty - 15%;
-        }
-        &.position-36 {
-          background-color: $blue;
-          top: $fifty + 27%;
-          left: $fifty - 17%;
-        }
-        &.position-37 {
-          background-color: $d-blue;
-          top: $fifty + 20%;
-          left: $fifty;
-        }
-        &.position-38 {
-          background-color: $orange;
-          top: $fifty + 22%;
-          left: $fifty + 15%;
-        }
-        &.position-39 {
-          background-color: $teal;
-          top: $fifty - 10%;
-          left: $fifty;
-        }
-        &.position-40 {
-          background-color: $pink;
-          top: $fifty + 5%;
-          left: $fifty + 5%;
-        }
-      }
-
-      .empty {
-        box-shadow: 0 0 10px #fff;
-        background: white !important;
-        opacity: .8;
       }
     }
   }
