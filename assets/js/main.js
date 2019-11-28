@@ -15,30 +15,43 @@ function addBall(params) {
     document.getElementById("tree").appendChild(ball);
 }
 
+function validateData(data) {
+
+    if ( data.first_name === "" || data.last_name === "" ||
+         data.host === "" || data.message === "" ||
+         data.position.x === "" || data.position.y === ""
+    ) {
+        $("#modal-wish-hint").text("Fill all the gaps!");
+        return false;
+    }
+
+    if (data.first_name.length >= 20) {
+        $("#modal-wish-hint").text("Name is too long!");
+        return false;
+    }
+
+    if (data.last_name.length >= 30) {
+        $("#modal-wish-hint").text("Last name is too long!");
+        return false;
+    }
+
+    if (data.host.length >= 30) {
+        $("#modal-wish-hint").text("Antennae name is too long!");
+        return false;
+    }
+
+    return true;
+}
+
 async function saveNewBall() {
-        if (
-            document.getElementById("modal-wish-name").value === "" ||
-            document.getElementById("modal-wish-last-name").value === "" ||
-            document.getElementById("modal-wish-host").value === "" ||
-            document.getElementById("modal-wish-message").value === ""
-        ) {
-            document.getElementById("modal-wish-hint").classList.add("is-show");
-            document.getElementById("modal-wish-hint").innerText = "Fill all the gaps!";
-            return;
-        }
-        document.getElementById("modal-wish-hint").classList.remove("is-show");
-        //document.getElementById("modal-wish").classList.remove("is-show");
     
         //let response = await fetch('http://ipinfo.io/ip');
         //let ip = await response.text();
         
-        var msg = $("#modal-wish-message").val();
-        msg = msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
-        
         var ball = {
             first_name: $("#modal-wish-name").val(),
             last_name: $("#modal-wish-last-name").val(),
-            msg: msg,
+            msg: $("#modal-wish-message").val(),
             host: $("#modal-wish-host").val(),
             position: {
                 x: $("#modal-wish-x-position").val()+'%',
@@ -47,9 +60,19 @@ async function saveNewBall() {
             //ip: ip.slice(0, -1)
             ip: "0.0.0.0"
         }
+
+        if (!validateData(ball)) {
+            $("#modal-wish-hint").addClass("is-show");
+            return false;
+        }
+        $("#modal-wish-hint").removeClass("is-show");
+
+        ball.msg = ball.msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
         ball.id = await firebase.database().ref('wishes').push(ball).key;
 
-        addBall(ball)
+        addBall(ball);
+
+        return true;
     }
 
 $(document).ready(function () {
@@ -84,17 +107,12 @@ $(document).ready(function () {
 
     });
 
-    /* host mask */
-    IMask(document.getElementById("modal-wish-host"), {
-        mask: "{AEGEE-}[**********************]",
-        lazy: false
-    });
-
-    var submit = document.getElementById("submit");
-    submit.addEventListener("click", function(e) {
+    $("#submit").click( async function(e) {
         e.preventDefault();
-        saveNewBall();
-        $("#modal-wish-form").trigger("reset");
+        if (await saveNewBall()) {
+            MicroModal.close('modal-wish');
+            $("#modal-wish-form").trigger("reset");
+        }
     });
 
     var tree_img = document.getElementById("tree");
