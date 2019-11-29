@@ -79,7 +79,6 @@ async function saveNewBall() {
     }
 
 function area(coords) {
-    console.log(coords);
     // abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0)
     return Math.abs((coords[0][0]*(coords[1][1]-coords[2][1]) + coords[1][0]*(coords[2][1]-coords[0][1]) + coords[2][0]*(coords[0][1]-coords[1][1]))/2.0);
 }
