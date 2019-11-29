@@ -9,11 +9,21 @@ html, body {
 body {
   background: url($bg-img) no-repeat top left #f2f2f2;
   background-size: cover;
+  background-attachment: fixed;
   font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
   @media screen and (max-width: $tree-width) {
     /* for mobile */
     width: 100%;
+  }
+
+  .popover {
+    white-space: pre-wrap;
+  }
+
+  .popover-title {
+    font-weight: bold;
+    text-align: center;
   }
 
   .christmas {

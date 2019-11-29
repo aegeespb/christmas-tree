@@ -8,6 +8,7 @@ html, body {
 body {
   background: url("../images/bg.jpg") no-repeat top left #f2f2f2;
   background-size: cover;
+  background-attachment: fixed;
   font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
 }
@@ -16,6 +17,13 @@ body {
     /* for mobile */
     width: 100%;
   }
+}
+body .popover {
+  white-space: pre-wrap;
+}
+body .popover-title {
+  font-weight: bold;
+  text-align: center;
 }
 body .christmas {
   text-align: center;
