@@ -144,7 +144,10 @@ $(document).ready(function () {
         }
     });
 
-    snow.start();
+    snow.start({
+        stickingRatio: 0.0,
+        maxHeightRatio: 0.0
+    });
 
     /* modal lib */
     MicroModal.init();
