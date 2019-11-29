@@ -8,11 +8,15 @@ function addBall(params) {
     ball.setAttribute('data-toggle', 'popover-hover');
     ball.setAttribute('title', '<b>'+params.first_name+' '+params.last_name+'</b><br />from '+params.host);
     ball.setAttribute('data-content', params.msg);
-    ball.addEventListener("click", e => { e.stopPropagation(); });
     ball.style.left = params.position.x;
     ball.style.top = params.position.y;
 
     document.getElementById("tree").appendChild(ball);
+
+    ball.addEventListener("click", e => {
+        e.stopPropagation();
+        $('#'+params.id).popover('toggle');
+    });
 }
 
 function validateData(data) {
@@ -75,6 +79,22 @@ async function saveNewBall() {
         return true;
     }
 
+function area(coords) {
+    console.log(coords);
+    // abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0)
+    return Math.abs((coords[0][0]*(coords[1][1]-coords[2][1]) + coords[1][0]*(coords[2][1]-coords[0][1]) + coords[2][0]*(coords[0][1]-coords[1][1]))/2.0);
+}
+
+function clickedOnTree(x, y) {
+    var triangle = [ [ 45, 1 ], [ 9, 90 ], [ 82, 90 ] ];
+    a = area(triangle);
+    a1 = area([ [ x, y ], triangle[1], triangle[2] ]);
+    a2 = area([ triangle[0], [ x, y ], triangle[2] ]);
+    a3 = area([ triangle[0], triangle[1], [ x, y ] ]);
+
+    return a == a1+a2+a3;
+}
+
 $(document).ready(function () {
 
     firebase.initializeApp(firebaseConfig);
@@ -99,7 +119,7 @@ $(document).ready(function () {
 
         $('body').popover({
             html: true,
-            trigger: 'hover click',
+            trigger: 'hover',
             placement: 'left auto',
             selector: '[data-toggle="popover-hover"]'
         });
@@ -119,8 +139,12 @@ $(document).ready(function () {
     tree_img.addEventListener("click", function (e) {
         var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
         var y = Math.floor(e.layerY*100/this.clientHeight);
-        $("#modal-wish-x-position").val(x); // e.layerX-18; //e.pageX - this.offsetLeft;
-        $("#modal-wish-y-position").val(y); // e.layerY; //e.pageY - this.offsetTop;
+        console.log("X: ", x, " Y: ", y);
+        if (clickedOnTree(x,y)) {
+            $("#modal-wish-x-position").val(x); // e.layerX-18; //e.pageX - this.offsetLeft;
+            $("#modal-wish-y-position").val(y); // e.layerY; //e.pageY - this.offsetTop;
+            MicroModal.show('modal-wish');
+        }
     });
 
     snow.start();
