@@ -6,7 +6,7 @@ function addBall(params) {
     ball.setAttribute('src', 'assets/images/ball-'+ball_num+'.png');
     ball.setAttribute('id', params.id);
     ball.setAttribute('data-toggle', 'popover-hover');
-    ball.setAttribute('title', '<b>'+params.first_name+' '+params.last_name+'</b><br />from '+params.host);
+    ball.setAttribute('title', params.first_name+' '+params.last_name+'\n'+params.host);
     ball.setAttribute('data-content', params.msg);
     ball.style.left = params.position.x;
     ball.style.top = params.position.y;
@@ -71,7 +71,6 @@ async function saveNewBall() {
         }
         $("#modal-wish-hint").removeClass("is-show");
 
-        ball.msg = ball.msg.replace(/(?:\r\n|\r|\n)/g, '<br />');
         ball.id = await firebase.database().ref('wishes').push(ball).key;
 
         addBall(ball);
@@ -118,7 +117,7 @@ $(document).ready(function () {
         });
 
         $('body').popover({
-            html: true,
+            html: false,
             trigger: 'hover',
             placement: 'left auto',
             selector: '[data-toggle="popover-hover"]'
@@ -139,10 +138,9 @@ $(document).ready(function () {
     tree_img.addEventListener("click", function (e) {
         var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
         var y = Math.floor(e.layerY*100/this.clientHeight);
-        console.log("X: ", x, " Y: ", y);
         if (clickedOnTree(x,y)) {
-            $("#modal-wish-x-position").val(x); // e.layerX-18; //e.pageX - this.offsetLeft;
-            $("#modal-wish-y-position").val(y); // e.layerY; //e.pageY - this.offsetTop;
+            $("#modal-wish-x-position").val(x);
+            $("#modal-wish-y-position").val(y);
             MicroModal.show('modal-wish');
         }
     });
