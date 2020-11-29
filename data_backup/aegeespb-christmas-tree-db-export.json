@@ -1,0 +1,567 @@
+{
+  "wishes" : {
+    "-LvAybrsvV5JvOEHK5I7" : {
+      "first_name" : "Anastasia",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Romash",
+      "msg" : "Not going to wish all your dreams come true, but wish you enough strengths and persistence to turn them into reality yourself.",
+      "position" : {
+        "x" : "45%",
+        "y" : "1%"
+      }
+    },
+    "-LvH2uBm_FnTijYAEmsZ" : {
+      "first_name" : "Maria",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Eselevich",
+      "msg" : "I wish you a year full of positive emotions, new friends and achieved goals ❤️",
+      "position" : {
+        "x" : "58%",
+        "y" : "55%"
+      }
+    },
+    "-LvH4tLR3bLZsjdE7FCF" : {
+      "first_name" : "Daria",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Kutina",
+      "msg" : "Enjoy your life to the fullest: set and achieve goals, have thousand adventures, travel often, learn new things and become better and happier version of yourself!",
+      "position" : {
+        "x" : "36%",
+        "y" : "58%"
+      }
+    },
+    "-LvHNb8mZPA2BNL4YkMl" : {
+      "first_name" : "Mark",
+      "host" : "AEGEE-Chisinau",
+      "ip" : "0.0.0.0",
+      "last_name" : "Williams",
+      "msg" : "minden jót!",
+      "position" : {
+        "x" : "41%",
+        "y" : "16%"
+      }
+    },
+    "-LvI7rj5pMrwOvEnWTbG" : {
+      "first_name" : "Roman",
+      "host" : "AEGEE-SPb",
+      "ip" : "0.0.0.0",
+      "last_name" : "M",
+      "msg" : "Крутая елка. С новым годом!",
+      "position" : {
+        "x" : "49%",
+        "y" : "46%"
+      }
+    },
+    "-LvLL_yEobDtAz9rpiA9" : {
+      "first_name" : "Anna",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Smirnova",
+      "msg" : "Hope the new year will bring joy, tolerance, friendship and happiness to all of us =)",
+      "position" : {
+        "x" : "73%",
+        "y" : "89%"
+      }
+    },
+    "-LvLRQxLRi-5syKr8vMF" : {
+      "first_name" : "Leon",
+      "host" : "AEGEE-Aachen",
+      "ip" : "0.0.0.0",
+      "last_name" : "Kogel",
+      "msg" : "For everyone in the network I wish this christmas to be a time of peace and happiness surounded by your loved ones ☺❤ ",
+      "position" : {
+        "x" : "26%",
+        "y" : "75%"
+      }
+    },
+    "-LvMAhOCMYyPyOQlHDca" : {
+      "first_name" : "Adel",
+      "host" : "AEGEE-Saint-Petersburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Fatkhutdinov",
+      "msg" : "I wish you a super-duper productive year! <3",
+      "position" : {
+        "x" : "52%",
+        "y" : "25%"
+      }
+    },
+    "-LvQbK_KVlMBgZ1gw1qz" : {
+      "first_name" : "Victoria ",
+      "host" : "AEGEE-SPb ",
+      "ip" : "0.0.0.0",
+      "last_name" : "Strelnikova",
+      "msg" : "Let you be the magnet for luck, love and success in the upcoming year🎉",
+      "position" : {
+        "x" : "15%",
+        "y" : "83%"
+      }
+    },
+    "-LvUEXdlgC15lRE13cSt" : {
+      "first_name" : "Daria",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Smirnova",
+      "msg" : "Enjoy every moment of your life!)",
+      "position" : {
+        "x" : "38%",
+        "y" : "31%"
+      }
+    },
+    "-LvULf1gxHx6lWyeIJ-y" : {
+      "first_name" : "Vicente",
+      "host" : "AEGEE-Alicante",
+      "ip" : "0.0.0.0",
+      "last_name" : "Román Erades",
+      "msg" : "Live without borders!",
+      "position" : {
+        "x" : "41%",
+        "y" : "31%"
+      }
+    },
+    "-LvWYkryvk63ab1F-OU3" : {
+      "first_name" : "Philipp",
+      "host" : "AEGEE-Moskva",
+      "ip" : "0.0.0.0",
+      "last_name" : "Blum",
+      "msg" : "May you always be a little drunk :)",
+      "position" : {
+        "x" : "57%",
+        "y" : "38%"
+      }
+    },
+    "-LvWaxBP1KuT-f2UsArl" : {
+      "first_name" : "Anna",
+      "host" : "AEGEE-Bielefeld",
+      "ip" : "0.0.0.0",
+      "last_name" : "Pamplona",
+      "msg" : "Make 2020 the most Silver year ever!",
+      "position" : {
+        "x" : "47%",
+        "y" : "6%"
+      }
+    },
+    "-LvX4nj0hm_Wb9Ay5nb8" : {
+      "first_name" : "David",
+      "host" : "AEGEE-Aachen",
+      "ip" : "0.0.0.0",
+      "last_name" : "Südholt",
+      "msg" : "Frohe Weihnachten from Germany! Have a great NYE and a perfect start into 2020!",
+      "position" : {
+        "x" : "16%",
+        "y" : "82%"
+      }
+    },
+    "-LvfAkAZXNqFSWmW-JRW" : {
+      "first_name" : "Massimiliano",
+      "host" : "AEGEE-Verona",
+      "ip" : "0.0.0.0",
+      "last_name" : "Palese",
+      "msg" : "I wish the people improve themselves to save the nature",
+      "position" : {
+        "x" : "66%",
+        "y" : "75%"
+      }
+    },
+    "-LvfBAOd0_z5wktWV80x" : {
+      "first_name" : "Daria",
+      "host" : "AEGEE-Rostov-na-Donu",
+      "ip" : "0.0.0.0",
+      "last_name" : "Ganzhenko",
+      "msg" : "To meet all aegeeans in one place this summer😎",
+      "position" : {
+        "x" : "54%",
+        "y" : "65%"
+      }
+    },
+    "-LvfBOVbNMEY2jgnukil" : {
+      "first_name" : "Isabel",
+      "host" : "AEGEE-Valladolid ",
+      "ip" : "0.0.0.0",
+      "last_name" : "Santos",
+      "msg" : "I wish everyone a merry Christmas and all the best for the new year that is coming. See you somewhere in Europe!",
+      "position" : {
+        "x" : "60%",
+        "y" : "43%"
+      }
+    },
+    "-LvfBRa2HHxHuHDx-QgM" : {
+      "first_name" : "Michela",
+      "host" : "AEGEE-Verona",
+      "ip" : "0.0.0.0",
+      "last_name" : "Cintioli",
+      "msg" : "I wish all you wonderful Aegeeans have a lovely Christmas and I hope to see you somewhere in Europe!",
+      "position" : {
+        "x" : "42%",
+        "y" : "74%"
+      }
+    },
+    "-LvjkdafD3OgwtrvSTsw" : {
+      "first_name" : "Benjamin ",
+      "host" : "AEGEE-Aachen",
+      "ip" : "0.0.0.0",
+      "last_name" : "Schmitz",
+      "msg" : "Merry Christmas everyone ;)",
+      "position" : {
+        "x" : "34%",
+        "y" : "49%"
+      }
+    },
+    "-LvkAzkSL8SNhMasKU7g" : {
+      "first_name" : "MARÍA",
+      "host" : "AEGEE-Valladolid",
+      "ip" : "0.0.0.0",
+      "last_name" : "Cervantes",
+      "msg" : "Que disfrutemos de las fechas cargados de ilusión, compartiendo felicidad y momentos con los que queremos y los que tienen la suerte de estar a nuestro alrededor. \nQué ayudemos en lo que podamos y crezcamos y mejoremos el 2020 que ya viene.\nFeliz Navidad!",
+      "position" : {
+        "x" : "49%",
+        "y" : "39%"
+      }
+    },
+    "-LvkBnsdmYrdjGPHZeXJ" : {
+      "first_name" : "María",
+      "host" : "AEGEE-Valladolid",
+      "ip" : "0.0.0.0",
+      "last_name" : "Cervantes",
+      "msg" : "Enjoy this time of the year, sharing and creating joyful moments.\nTake care people who loved and helping and improving people whose around us.\nMerry Christmas and happy new year!! \nxoxo",
+      "position" : {
+        "x" : "51%",
+        "y" : "56%"
+      }
+    },
+    "-LvpnZrOV5Uflzl07StO" : {
+      "first_name" : "Lynn",
+      "host" : "AEGEE-Delft",
+      "ip" : "0.0.0.0",
+      "last_name" : "Aasman",
+      "msg" : "I wish everyone happy holidays. May we meet somewhere in Europe!",
+      "position" : {
+        "x" : "71%",
+        "y" : "69%"
+      }
+    },
+    "-LvqaXD9hVN0xerFG0CI" : {
+      "first_name" : "Gero ",
+      "host" : "AEGEE-Frankfurt",
+      "ip" : "0.0.0.0",
+      "last_name" : "Tergau",
+      "msg" : "Merry christmas and a happy new year to all AEGEEans and there families! Greetings from Frankfurt and Marburg:) ",
+      "position" : {
+        "x" : "41%",
+        "y" : "68%"
+      }
+    },
+    "-LwCdoC1UBoxZWRmUagk" : {
+      "first_name" : "M",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "M",
+      "msg" : "Be awesome!",
+      "position" : {
+        "x" : "49%",
+        "y" : "19%"
+      }
+    },
+    "-LwChO2tP7C8xL9hHNaY" : {
+      "first_name" : "Georgy",
+      "host" : "AEGEE-Sankt Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Tikhonov",
+      "msg" : "Guys! you're awesome! Can't wait for the Winter University! )) Good luck!",
+      "position" : {
+        "x" : "53%",
+        "y" : "76%"
+      }
+    },
+    "-LwmE1_nuxtpXtFrU0eh" : {
+      "first_name" : "Roberto",
+      "host" : "AEGEE-Torino",
+      "ip" : "0.0.0.0",
+      "last_name" : "Meneghetti",
+      "msg" : "Tanti auguri da un ragazzo un po' stagionato, ma con il cuore sempre giovane!",
+      "position" : {
+        "x" : "62%",
+        "y" : "65%"
+      }
+    },
+    "-LwmkHXAYgQo1SHTTj2R" : {
+      "first_name" : "Teo",
+      "host" : "AEGEE-Chișinău",
+      "ip" : "0.0.0.0",
+      "last_name" : ".",
+      "msg" : "Happy NY and see ya' in 2020 💙",
+      "position" : {
+        "x" : "31%",
+        "y" : "44%"
+      }
+    },
+    "-LwmkxqewQalQohy7uH3" : {
+      "first_name" : "Sabrina",
+      "host" : "AEGEE-Torino",
+      "ip" : "0.0.0.0",
+      "last_name" : "Ouk",
+      "msg" : "Wishing all the best for AEEGEEans <3\n\nJoyeuses fêtes à tous, la biiiise <3",
+      "position" : {
+        "x" : "40%",
+        "y" : "44%"
+      }
+    },
+    "-LwmoA0l0iOIBsqoU25U" : {
+      "first_name" : "Nacho",
+      "host" : "AEGEE-Oviedo",
+      "ip" : "0.0.0.0",
+      "last_name" : "Argüelles",
+      "msg" : "Happy holidays! \n\nAnd remember: sharing is caring <3",
+      "position" : {
+        "x" : "51%",
+        "y" : "16%"
+      }
+    },
+    "-LwmokFCiM1ygFr-Mmnz" : {
+      "first_name" : "Anastasia",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Sukhareva",
+      "msg" : "May the new year bring you joy and happiness! ",
+      "position" : {
+        "x" : "49%",
+        "y" : "13%"
+      }
+    },
+    "-LwtRbhknkVrTkoy2Idp" : {
+      "first_name" : "Hicham",
+      "host" : "AEGEE-Klonk",
+      "ip" : "0.0.0.0",
+      "last_name" : "Z",
+      "msg" : "Alvast een gelukkig nieuwjaar en de beste wensen. Hopelijk biedt 2020 vele en mooie klonk memes ",
+      "position" : {
+        "x" : "44%",
+        "y" : "27%"
+      }
+    },
+    "-LwtT5rYeFSmhElSbZ1Y" : {
+      "first_name" : "Svetlana",
+      "host" : "AEGEE-Moskva",
+      "ip" : "0.0.0.0",
+      "last_name" : "Gudkova",
+      "msg" : "Let miracles happen not only during Christmas time ;)",
+      "position" : {
+        "x" : "64%",
+        "y" : "88%"
+      }
+    },
+    "-LwtVdGjsXCjMTzyAqB_" : {
+      "first_name" : "Pablo",
+      "host" : "AEGEE-León",
+      "ip" : "0.0.0.0",
+      "last_name" : "Gutiérrez",
+      "msg" : "I wish another year of meeting the best people, great events and epic parties 🎅🤞",
+      "position" : {
+        "x" : "48%",
+        "y" : "87%"
+      }
+    },
+    "-LwwcDa_7pOGfvN3_cIM" : {
+      "first_name" : "Sander",
+      "host" : "AEGEE-Tilburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Berendsen",
+      "msg" : "Zalig kerstfeest, merry Christmas from the Netherlands! Wish you a successful,  borderless and sound 2020! ",
+      "position" : {
+        "x" : "28%",
+        "y" : "69%"
+      }
+    },
+    "-MNIMgpNOHzBqX3_exCf" : {
+      "first_name" : "Grigory ",
+      "host" : "AEGEE-Spb",
+      "ip" : "0.0.0.0",
+      "last_name" : "Panov",
+      "msg" : "Be the best",
+      "position" : {
+        "x" : "33%",
+        "y" : "85%"
+      }
+    },
+    "-MNIN365pOl88dPUJ0bA" : {
+      "first_name" : "Mari",
+      "host" : "AEGEE-Moscow",
+      "ip" : "0.0.0.0",
+      "last_name" : "L",
+      "msg" : "lalala",
+      "position" : {
+        "x" : "33%",
+        "y" : "79%"
+      }
+    }
+  },
+  "wishes_bak" : {
+    "-LuiV2OubKIsZ9qoDbO2" : {
+      "first_name" : "Ivan",
+      "host" : "AEGEE-Sankt-Peterburg",
+      "ip" : "0.0.0.0",
+      "last_name" : "Fedotov",
+      "msg" : "Have a happy New Year",
+      "position" : {
+        "x" : "80%",
+        "y" : "88%"
+      }
+    },
+    "-LuoIaE7W2F6JtmwMHc_" : {
+      "first_name" : "Salem",
+      "host" : "AEGEE-COVEN",
+      "ip" : "0.0.0.0",
+      "last_name" : "Saberhagen",
+      "msg" : "Someone's gonna end up crying.\nProbably me.",
+      "position" : {
+        "x" : "36%",
+        "y" : "16%"
+      }
+    },
+    "-LupRJnZz5EliS0z731A" : {
+      "first_name" : "Королева мира",
+      "host" : "AEGEE-в рот ",
+      "ip" : "0.0.0.0",
+      "last_name" : "Хуй",
+      "msg" : "Наоборот ",
+      "position" : {
+        "x" : "56%",
+        "y" : "65%"
+      }
+    },
+    "-LupdpSJPDseGr0oaxvM" : {
+      "first_name" : "Лупа",
+      "host" : "AEGEE-Залупа",
+      "ip" : "0.0.0.0",
+      "last_name" : "и Пупа",
+      "msg" : "Sample text ",
+      "position" : {
+        "x" : "47%",
+        "y" : "46%"
+      }
+    },
+    "-LupeUdpJqKmX654dVTm" : {
+      "first_name" : "Гарри",
+      "host" : "AEGEE-Хогвартс",
+      "ip" : "0.0.0.0",
+      "last_name" : "Повар",
+      "msg" : "Ну и как там в Египте?",
+      "position" : {
+        "x" : "60%",
+        "y" : "27%"
+      }
+    },
+    "-Lupf7yCuwKNErPPSwzT" : {
+      "first_name" : "Блум",
+      "host" : "AEGEE-Coven",
+      "ip" : "0.0.0.0",
+      "last_name" : "Феечка",
+      "msg" : "Энчантикс",
+      "position" : {
+        "x" : "61%",
+        "y" : "80%"
+      }
+    },
+    "-LupgQ9GzNoxbQiKW0WB" : {
+      "first_name" : "Вай",
+      "host" : "AEGEE-оа",
+      "ip" : "0.0.0.0",
+      "last_name" : "Ой",
+      "msg" : "Р\nо\nл",
+      "position" : {
+        "x" : "49%",
+        "y" : "6%"
+      }
+    },
+    "-Luq2itnavMlflqnwMq5" : {
+      "first_name" : "Марлин",
+      "host" : "AEGEE-делфт",
+      "ip" : "0.0.0.0",
+      "last_name" : "Заебнова",
+      "msg" : "Почему именно ёлка?",
+      "position" : {
+        "x" : "34%",
+        "y" : "27%"
+      }
+    },
+    "-Luq9YJi30K9l-kryMgL" : {
+      "first_name" : "Зои",
+      "host" : "AEGEE-Coven",
+      "ip" : "0.0.0.0",
+      "last_name" : "Бенсон",
+      "msg" : "Упс, я оживила мертвяка",
+      "position" : {
+        "x" : "30%",
+        "y" : "58%"
+      }
+    },
+    "-LuqMb5NQ4gTMF3iK0Fm" : {
+      "first_name" : "Умка",
+      "host" : "AEGEE-покасики",
+      "ip" : "0.0.0.0",
+      "last_name" : "Кукусики",
+      "msg" : "Где мой бокал вина?",
+      "position" : {
+        "x" : "45%",
+        "y" : "34%"
+      }
+    },
+    "-LuqOsTWfx-y27ghbQ8E" : {
+      "first_name" : "Зина",
+      "host" : "AEGEE-ковен-хуевен",
+      "ip" : "0.0.0.0",
+      "last_name" : "Из магазина",
+      "msg" : "Сука, верните мои шарики на домике!!!",
+      "position" : {
+        "x" : "30%",
+        "y" : "78%"
+      }
+    },
+    "-LuqwELchY-mQ5d2YSdd" : {
+      "first_name" : "rimi",
+      "host" : "AEGEE-",
+      "ip" : "0.0.0.0",
+      "last_name" : "a",
+      "msg" : "die",
+      "position" : {
+        "x" : "59%",
+        "y" : "53%"
+      }
+    },
+    "-Lur9fiHicXeeGn250GF" : {
+      "first_name" : "🥳",
+      "host" : "AEGEE-🥳",
+      "ip" : "0.0.0.0",
+      "last_name" : "🧐",
+      "msg" : "😏🥳😟🙁",
+      "position" : {
+        "x" : "38%",
+        "y" : "71%"
+      }
+    },
+    "-Lur9osPel3k0WxnCNpU" : {
+      "first_name" : "Hop",
+      "host" : "AEGEE-Lalaley",
+      "ip" : "0.0.0.0",
+      "last_name" : "Hey",
+      "msg" : "Da-ba-di-da-ba-dai",
+      "position" : {
+        "x" : "56%",
+        "y" : "53%"
+      }
+    },
+    "-LurGCBOckOJZdmstrHn" : {
+      "first_name" : "Baby",
+      "host" : "AEGEE-Hunters",
+      "ip" : "0.0.0.0",
+      "last_name" : "Shark",
+      "msg" : "Do-do-do!",
+      "position" : {
+        "x" : "33%",
+        "y" : "55%"
+      }
+    }
+  }
+}
