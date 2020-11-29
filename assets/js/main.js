@@ -134,6 +134,11 @@ $(document).ready(function () {
         }
     });
 
+    $("#modal__close").click( async function(e) {
+        e.preventDefault();
+        MicroModal.close('modal-wish');
+    });
+
     var tree_img = document.getElementById("tree");
     tree_img.addEventListener("click", function (e) {
         var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
