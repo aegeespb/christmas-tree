@@ -40,7 +40,7 @@ function validateData(data) {
     }
 
     if (data.host.length >= 30) {
-        $("#modal-wish-hint").text("Antennae name is too long!");
+        $("#modal-wish-hint").text("Local name is too long!");
         return false;
     }
 
