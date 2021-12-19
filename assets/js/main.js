@@ -70,6 +70,7 @@ async function saveNewBall() {
             return false;
         }
         $("#modal-wish-hint").removeClass("is-show");
+
         ball.id = await firebase.database().ref('wishes').push(ball).key;
 
         addBall(ball);
@@ -96,8 +97,6 @@ function clickedOnTree(x, y) {
 $(document).ready(function () {
 
     firebase.initializeApp(firebaseConfig);
-
-    firebase.database().ref("wishes").clean()
 
     var ref = firebase.database().ref("wishes");
     ref.once('value').then(function(snapshot) {
