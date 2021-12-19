@@ -166,15 +166,5 @@ body section.main .tree .ball:hover {
   display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .time_machine {
-    visibility: hidden;
-    clear: both;
-    float: left;
-    margin: 10px auto 5px 20px;
-    width: 28%;
-    display: none;
-  }
-}
 
 /*# sourceMappingURL=main.css.map */
