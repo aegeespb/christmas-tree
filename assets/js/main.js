@@ -96,8 +96,8 @@ function clickedOnTree(x, y) {
 
 $(document).ready(function () {
     var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-    if (mobile) {
-        document.getElementById("time_machine").style.display = "none"
+    if (!mobile) {
+        document.getElementById("time_machine").style.display = "block"
     }
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
