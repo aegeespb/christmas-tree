@@ -186,5 +186,5 @@ function timeMachine(year) {
     if (!isNumeric(year + "")) return
 
     const url = location.protocol + '//' + location.host + location.pathname + "?year=" + year
-    window.location.replace(url);
+    window.open(url,"_self")
 }
