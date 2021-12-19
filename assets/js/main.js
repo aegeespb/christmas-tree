@@ -95,12 +95,31 @@ function clickedOnTree(x, y) {
 }
 
 $(document).ready(function () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const year = urlParams.get("year")
+    var firebaseRef = ""
 
+    if (isNumeric(year) && (year === "2020" || year === "2021")) {
+        firebaseRef = "_bac_" + year
+        document.getElementById("title").innerHTML = "<p>Happy New <b>" + year + "</b> Year!</p>"
+
+        if (year === "2020") {
+            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
+            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2021)\">2021</button> <br>"
+        } else if (year === "2021") {
+            document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2022)\">Back to 2022</button> <br>"
+            document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2020)\">2020</button> <br>"
+        }
+    } else {
+        document.getElementById("tm_1").innerHTML = "<button id=\"tm_1\" type=\"button\" onclick=\"timeMachine(2020)\">2020</button> <br>"
+        document.getElementById("tm_2").innerHTML = "<button id=\"tm_2\" type=\"button\" onclick=\"timeMachine(2021)\">2021</button> <br>"
+
+    }
     firebase.initializeApp(firebaseConfig);
+    var ref = firebase.database().ref("wishes" + firebaseRef);
 
-    var ref = firebase.database().ref("wishes");
     ref.once('value').then(function(snapshot) {
-
         snapshot.forEach(function(childSnapshot) {
             addBall({
                 id: childSnapshot.key,
@@ -143,7 +162,8 @@ $(document).ready(function () {
     tree_img.addEventListener("click", function (e) {
         var x = Math.floor((e.layerX - 0.03*this.clientWidth)*100/this.clientWidth);
         var y = Math.floor(e.layerY*100/this.clientHeight);
-        if (clickedOnTree(x,y)) {
+        const year = urlParams.get("year")
+        if (clickedOnTree(x,y) && (year == null || year === "2022")) {
             $("#modal-wish-x-position").val(x);
             $("#modal-wish-y-position").val(y);
             MicroModal.show('modal-wish');
@@ -155,3 +175,16 @@ $(document).ready(function () {
     /* modal lib */
     MicroModal.init();
 });
+
+function isNumeric(str) {
+    if (typeof str != "string") return false // we only process strings!
+    return !isNaN(str) && // use type coercion to parse the _entirety_ of the string (`parseFloat` alone does not do this)...
+        !isNaN(parseFloat(str)) // ...and ensure strings of whitespace fail
+}
+
+function timeMachine(year) {
+    if (!isNumeric(year + "")) return
+
+    const url = location.protocol + '//' + location.host + location.pathname + "?year=" + year
+    window.location.replace(url);
+}
